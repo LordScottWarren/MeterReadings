@@ -1,0 +1,53 @@
+﻿@page "/"
+@using Client.Services
+@using Shared.Models
+@inject IUploadCsvService uploadCsvService
+@inject ISnackbar Snackbar
+
+<PageTitle>Upload Meter Readings</PageTitle>
+
+<MudText Typo="Typo.h3" Align="Align.Center">Upload Meter Readings</MudText>
+
+@if (processing)
+{
+    <MudProgressCircular Color="Color.Primary" Size="Size.Large" Indeterminate="true" />
+}
+else
+{
+    <MudFileUpload T="IBrowserFile" Accept=".csv" MaximumFileCount="1" FilesChanged="UploadFile">
+        <ActivatorContent>
+            <MudButton Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       StartIcon="@Icons.Material.Filled.CloudUpload">
+                Upload File
+            </MudButton>
+        </ActivatorContent>
+    </MudFileUpload>
+}
+
+@if(result != null)
+{
+    <MudPaper Width="300px">
+        <MudList T="string">
+            <MudListSubheader>
+                Upload Result
+            </MudListSubheader>
+            <MudListItem Text="@result.SuccessfulUploads.ToString()" Icon="@Icons.Material.Filled.AddCircleOutline" />
+            <MudListItem Text="@result.FailedUploads.ToString()" Icon="@Icons.Material.Filled.Error" />
+        </MudList>
+    </MudPaper>
+}
+
+@code
+{
+    MeterReadingUploadResult? result = null;
+    bool processing { get; set; } = false;
+
+    private async Task UploadFile(IBrowserFile file)
+    {
+        processing = true;
+        result = null;
+        result = await uploadCsvService.SendPost(file, Snackbar);
+        processing = false;
+    }
+}
