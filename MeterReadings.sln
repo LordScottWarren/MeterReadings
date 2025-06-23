@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterReadingsAPI", "MeterReadings\MeterReadingsAPI.csproj", "{5AB766EB-63D9-4F01-9CEB-3BF46E5F8D00}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterReadingsServiceLayer", "MeterReadingsServiceLayer\MeterReadingsServiceLayer.csproj", "{D0C1F107-1DD5-4A36-AF90-41D38410AE03}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterReadingsServiceLayer.Tests", "MeterReadingsServiceLayer.Tests\MeterReadingsServiceLayer.Tests.csproj", "{02D39EDC-C306-4677-B2B0-621323EC7F0D}"
@@ -17,16 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{1F1C42DB-F45F-41F2-BE4D-58BB759DC712}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterReadingsAPI", "MeterReadingsAPI\MeterReadingsAPI.csproj", "{5EE3E11A-049F-46F3-B720-159A1ADFF947}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5AB766EB-63D9-4F01-9CEB-3BF46E5F8D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5AB766EB-63D9-4F01-9CEB-3BF46E5F8D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5AB766EB-63D9-4F01-9CEB-3BF46E5F8D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5AB766EB-63D9-4F01-9CEB-3BF46E5F8D00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D0C1F107-1DD5-4A36-AF90-41D38410AE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D0C1F107-1DD5-4A36-AF90-41D38410AE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0C1F107-1DD5-4A36-AF90-41D38410AE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{1F1C42DB-F45F-41F2-BE4D-58BB759DC712}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F1C42DB-F45F-41F2-BE4D-58BB759DC712}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F1C42DB-F45F-41F2-BE4D-58BB759DC712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE3E11A-049F-46F3-B720-159A1ADFF947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE3E11A-049F-46F3-B720-159A1ADFF947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE3E11A-049F-46F3-B720-159A1ADFF947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE3E11A-049F-46F3-B720-159A1ADFF947}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
